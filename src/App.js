@@ -53,7 +53,7 @@ function reducer(state, { type, payload }) {
         return {
           ...state,
           overwrite: false,
-          currentOperand: ''
+          currentOperand: '0'
         }
        }
       if (state.currentOperand.length === 1) {
@@ -87,6 +87,9 @@ function reducer(state, { type, payload }) {
       }
 
     case ACTIONS.FLIP:
+      if (state.currentOperand === '0') {
+        return state
+      }
       if (state.currentOperand.includes('-')) {
         return {
           ...state,

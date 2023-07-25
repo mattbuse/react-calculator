@@ -14,10 +14,11 @@ body {
 
 .header {
   color: white;
+  font-size: 2.5rem;
 }
 
 .links {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 
@@ -80,10 +81,61 @@ body {
   background-color: rgb(225, 225, 225, .5);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+  .header {
+    font-size: 2.25rem;
+  }
+
+  .links {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    padding: 30px;
+    display: flex;
+  }
+
+  .header {
+    font-size: 1.6rem;
+  }
+  
+  .links {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .links a {
+    padding: 10px;
+  }
+
   .calculator-grid {
-    grid-template-columns: repeat(4, 5rem);
-    grid-template-rows: minmax(7rem, auto) repeat(5, 5rem);
+    margin-top: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: block;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .calculator-grid {
+    grid-template-columns: repeat(4, 4.5rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 4.5rem);
+    margin-top: 1.5rem;
   }
 
   .output .previous-operand {
